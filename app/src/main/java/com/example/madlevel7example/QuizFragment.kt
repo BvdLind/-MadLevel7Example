@@ -11,9 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_quiz.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class QuizFragment : Fragment() {
 
     private lateinit var viewModel: QuizViewModel

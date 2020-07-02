@@ -42,7 +42,7 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         this.answer = answer
 
         // persist data to firestore
-        val note = Note(question, answer).toMap()
+        val note = Quiz(question, answer).toMap()
 
         firestore.collection("quizzes")
             .document("quiz1")
