@@ -42,11 +42,11 @@ class QuizViewModel(application: Application) : AndroidViewModel(application) {
         this.answer = answer
 
         // persist data to firestore
-        val note = Quiz(question, answer).toMap()
+        val quiz = Quiz(question, answer).toMap()
 
         firestore.collection("quizzes")
             .document("quiz1")
-            .set(note)
+            .set(quiz)
             .addOnSuccessListener {
                 Log.e(FIRESTORE_TAG, "Quiz document update successful!")
                 Toast.makeText(context, "Quiz has been updated!", Toast.LENGTH_SHORT)
