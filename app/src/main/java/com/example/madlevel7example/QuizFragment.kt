@@ -33,6 +33,8 @@ class QuizFragment : Fragment() {
         // Initialize the Shared Activity ViewModel
         viewModel = ViewModelProvider(activity as AppCompatActivity).get(QuizViewModel::class.java)
 
+        tvQuestion.text = viewModel.question
+
         btnConfirmAnswer.setOnClickListener {
             if (viewModel.isAnswerCorrect(etAnswer.text.toString())) {
                 Toast.makeText(context, "Your answer is correct!", Toast.LENGTH_LONG).show()
